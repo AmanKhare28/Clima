@@ -1,34 +1,3 @@
-// const u = "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=";
-// const options = {
-//   method: "GET",
-//   headers: {
-//     "X-RapidAPI-Key": "4e4e75a601msheba772ade55e23dp127cddjsn8968ae3afdd3",
-//     "X-RapidAPI-Host": "weather-by-api-ninjas.p.rapidapi.com",
-//   },
-// };
-
-// async function fetchData(city) {
-//   const url = u + city;
-//   try {
-//     const response = await fetch(url, options);
-//     const result = await response.json();
-//     document.querySelector(".mainT").innerHTML = result.temp + "°C";
-//     document.querySelector(".minT").innerHTML = result.min_temp + "°C";
-//     document.querySelector(".maxT").innerHTML = result.max_temp + "°C";
-//     document.querySelector(".windSpeed").innerHTML = result.wind_speed + "m/s";
-//     document.querySelector(".degree").innerHTML = result.wind_degrees + "°";
-//     document.querySelector(".humidity").innerHTML = result.humidity + "%";
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
-// const x = document.querySelector("#submit");
-// x.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   const search_bar = document.querySelector(".search");
-//   fetchData(search_bar.value);
-// });
-// fetchData("Delhi");
 const u = "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=";
 const options = {
   method: "GET",
