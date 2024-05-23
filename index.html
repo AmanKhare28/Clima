@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clima</title>
+    <link rel="stylesheet" href="clima.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form class="search">
+        <input type="text" class="searchBar" placeholder="Search..." />
+        <button class="searchBtn" type="submit">Search</button>
+      </form>
+      <div class="mid">
+        <div class="loc">
+          <div class="cityName"></div>
+          <div class="wText"></div>
+          <div class="date"></div>
+        </div>
+        <div class="temp">
+          <div class="mainT"></div>
+          <div class="minmax">
+            <div class="minT"></div>
+            <div>|</div>
+            <div class="maxT"></div>
+          </div>
+        </div>
+      </div>
+      <div class="end">
+        <div class="wind">
+          <div class="head">
+            <img src="/pics/wind-icon.png" class="windIcon" />
+            <div class="windText">Wind</div>
+          </div>
+          <div class="windContent">
+            <div class="windSpeed"></div>
+            <div class="degree"></div>
+          </div>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="humidity">
+          <div class="head">
+            <img src="/pics/water.png" class="windIcon" />
+            <div class="windText">Humidity</div>
+          </div>
+          <div class="windContent">
+            <div class="humidity_content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="api2.js"></script>
+  </body>
+</html>
