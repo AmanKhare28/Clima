@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./clima.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="left">
+      <div class="search">
+        <input type="text" class="searchBar" placeholder="e.g.'Delhi,India'" />
+        <button class="searchBtn">
+          <span class="material-symbols-outlined"> search </span>
+        </button>
+      </div>
+      <div class="temp"></div>
+      <div class="type">
+        <div class="typeText"></div>
+        <div class="icon"></div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="date-info">
+        <div class="updated">Last Updated :</div>
+        <div class="date"></div>
+        <div class="time"></div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="location">Delhi, India</div>
+    </div>
+    <div class="right">
+      <div class="wind box">
+        <div class="head">
+          <span class="material-symbols-outlined"> air </span>
+          <div>Wind</div>
+        </div>
+        <p class="degree">120°NNS</p>
+        <p class="speed">300mph</p>
+      </div>
+      <div class="humidity box">
+        <div class="head">
+          <span class="material-symbols-outlined"> humidity_percentage </span>
+          <div>Humidity</div>
+        </div>
+        <p class="percentage">100%</p>
+      </div>
+    </div>
+
+    <script src="./api2.js"></script>
+  </body>
+</html>
