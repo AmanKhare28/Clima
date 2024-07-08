@@ -160,6 +160,10 @@ body {
   .wind .head {
     margin-bottom: 30px;
   }
+  .searchBar {
+    padding-left: 10px;
+    font-size: 1rem;
+  }
 }
 @media (min-height: 670px) {
   .left {

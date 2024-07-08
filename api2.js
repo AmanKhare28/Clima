@@ -20,6 +20,15 @@ function findWeather(city) {
       document.querySelector(
         ".location"
       ).innerHTML = `${data.location.name},${data.location.country}`;
+      document.querySelector(
+        ".degree"
+      ).innerHTML = `${data.current.wind_degree}°${data.current.wind_dir}`;
+      document.querySelector(
+        ".speed"
+      ).innerHTML = `${data.current.wind_mph}mph`;
+      document.querySelector(
+        ".percentage"
+      ).innerHTML = `${data.current.humidity}%`;
     })
     .catch((error) => {
       console.error("Error fetching the weather data:", error);
