@@ -1,5 +1,5 @@
 let APIkey = "22306cb60bbc4ab49fc84147240807";
-let baseURL = "http://api.weatherapi.com/v1/current.json";
+let baseURL = "https://api.weatherapi.com/v1/current.json";
 
 function findWeather(city) {
   let finalURL = `${baseURL}?key=${APIkey}&q=${city}`;
