@@ -1,10 +1,15 @@
+let APIkey = "22306cb60bbc4ab49fc84147240807";
 let baseURL = "http://api.weatherapi.com/v1/current.json";
-let APIkey = "22306cb60bbc4ab49fc84147240807"; // Corrected the format
 
 function findWeather(city) {
   let finalURL = `${baseURL}?key=${APIkey}&q=${city}`;
   fetch(finalURL)
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
     .then((data) => {
       console.log(data);
       document.querySelector(
@@ -19,13 +24,13 @@ function findWeather(city) {
         data.current.last_updated.substr(11, 15);
       document.querySelector(
         ".location"
-      ).innerHTML = `${data.location.name},${data.location.country}`;
+      ).innerHTML = `${data.location.name}, ${data.location.country}`;
       document.querySelector(
         ".degree"
-      ).innerHTML = `${data.current.wind_degree}°${data.current.wind_dir}`;
+      ).innerHTML = `${data.current.wind_degree}° ${data.current.wind_dir}`;
       document.querySelector(
         ".speed"
-      ).innerHTML = `${data.current.wind_mph}mph`;
+      ).innerHTML = `${data.current.wind_mph} mph`;
       document.querySelector(
         ".percentage"
       ).innerHTML = `${data.current.humidity}%`;
@@ -37,7 +42,8 @@ function findWeather(city) {
 
 const btn = document.querySelector(".searchBtn");
 btn.addEventListener("click", (e) => {
-  const cityname = document.querySelector(".searchBar");
-  findWeather(cityname.value); // Corrected the function name
+  const cityname = document.querySelector(".searchBar").value;
+  findWeather(cityname); // Corrected the function name
 });
+
 findWeather("Delhi,India");
